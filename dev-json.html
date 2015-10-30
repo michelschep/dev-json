@@ -53,13 +53,13 @@
         }
       },
 
-      _stringify(title, obj) {
+      _stringify: function(title, obj) {
         return JSON.stringify(obj, null, 2);
         let json = JSON.stringify(obj, null, 2);
         return title ? title + ' = ' + json : json;
       },
 
-      _jsonChanged() {
+      _jsonChanged: function() {
         if(this.log){
           console.log('[CHANGE]', this.title, this.json);
         }
